@@ -1,42 +1,37 @@
 <script>
-  // Open the Modal
-  function openModal() {
-    document.getElementById('myModal').style.display = "block";
-  }
+  $(document).ready(function() {
+        
+   /* activate the carousel */
+   $("#modal-carousel").carousel({interval:false});
 
-  // Close the Modal
-  function closeModal() {
-    document.getElementById('myModal').style.display = "none";
-  }
+   /* change modal title when slide changes */
+   $("#modal-carousel").on("slid.bs.carousel",       function () {
+        $(".modal-title")
+        .html($(this)
+        .find(".active img")
+        .attr("title"));
+   });
 
-  var slideIndex = 1;
-  showSlides(slideIndex);
+   /* when clicking a thumbnail */
+   $(".row .thumbnail").click(function(){
+    var content = $(".carousel-inner");
+    var title = $(".modal-title");
+  
+    content.empty();  
+    title.empty();
+  
+    var id = this.id;  
+     var repo = $("#img-repo .item");
+     var repoCopy = repo.filter("#" + id).clone();
+     var active = repoCopy.first();
+  
+    active.addClass("active");
+    title.html(active.find("img").attr("title"));
+    content.append(repoCopy);
 
-  // Next/previous controls
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
+    // show the modal
+    $("#modal-gallery").modal("show");
+  });
 
-  // Thumbnail image controls
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("demo");
-    var captionText = document.getElementById("caption");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    captionText.innerHTML = dots[slideIndex-1].alt;
-  }
+});
 </script>
