@@ -15,6 +15,7 @@
     <!-- Custom styles for this template -->
     <link href="css/full-slider.css" rel="stylesheet">
     <link href="CSS/cover.css" rel = "stylesheet">
+    <link href="CSS/gallery.css" rel="stylesheet">
 
   </head>
 
@@ -104,7 +105,7 @@
 
       <!-- Info About INVERSO Work -->
       <div class = "container">
-        <h1 class ="text-center"> Design - Develop - Build </h1>
+        <h1 class ="text-center"> Design &middot Develop &middot Build </h1>
         <p> 
           INVERSO, Inc., is a design- build development company specializing in residential construction with over 15 years experience. We have designed and built projects in Chicago, Illinois, Boca Raton, Florida and Big Sky, Montana. 
         </p>
@@ -123,6 +124,7 @@
     <!-- Gallery -->  
     <div class="row justify-content-center">
         <div class="col-md-8">
+          <div class = "container" id = "firstrow">
             <div class="row">
                 <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="hidden-images" class="col-sm-4">
                     <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
@@ -134,25 +136,28 @@
                     <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid">
                 </a>
             </div>
+          </div>
+          <div class = "container" id = "secondrow">
             <div class="row">
-                <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="hidden-images" class="col-sm-4">
+                <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="hidden-images1" class="col-sm-4">
                     <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">
                 </a>
-                <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="hidden-images" class="col-sm-4">
+                <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="hidden-images1" class="col-sm-4">
                     <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
                 </a>
-                <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="hidden-images" class="col-sm-4">
+                <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="hidden-images1" class="col-sm-4">
                     <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid">
                 </a>
             </div>
+          </div>
         </div>
 
         <!-- elements not showing, use data-remote -->
-        <div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://unsplash.it/1200/768.jpg?image=264" data-title="Hidden item 1"></div>
-        <div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://www.youtube.com/embed/b0jqPvpn3sY"  data-title="Hidden item 2"></div>
-        <div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://unsplash.it/1200/768.jpg?image=265" data-title="Hidden item 3"></div>
-        <div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://unsplash.it/1200/768.jpg?image=266" data-title="Hidden item 4"></div>
-        <div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://unsplash.it/1200/768.jpg?image=267" data-title="Hidden item 5"></div>
+        <div data-toggle="lightbox" data-gallery="hidden-images"  data-remote="https://unsplash.it/1200/768.jpg?image=264" data-title="Hidden item 1"></div>
+        <div data-toggle="lightbox" data-gallery="hidden-images"  data-remote="https://www.youtube.com/embed/b0jqPvpn3sY"  data-title="Hidden item 2"></div>
+        <div data-toggle="lightbox" data-gallery="hidden-images1" data-remote="https://unsplash.it/1200/768.jpg?image=265" data-title="Hidden item 3"></div>
+        <div data-toggle="lightbox" data-gallery="hidden-images1" data-remote="https://unsplash.it/1200/768.jpg?image=266" data-title="Hidden item 4"></div>
+        <div data-toggle="lightbox" data-gallery="hidden-images1" data-remote="https://unsplash.it/1200/768.jpg?image=267" data-title="Hidden item 5"></div>
 
     </div>
 
@@ -165,6 +170,72 @@
         </p>
       </div>
     </section>
+
+    <!-- Specialities Gallery -->
+    <div class = "row justify-content-center">
+      <div class = "col-md-8">
+        <div class = "container" id = "thirdrow">
+
+          <div class = "row">
+            
+              <img src = "SpecialtyImages/Kitchen/Kitchen1.jpeg" class = "img-fluid col-sm-4 hover-shadow" onclick="openModal();currentSlide(1)">
+            
+              <img src = "SpecialtyImages/Kitchen/Kitchen2.jpeg" class = "img-fluid col-sm-4 hover-shadow" onclick="openModal();currentSlide(1)">
+            
+              <img src = "SpecialtyImages/Kitchen/Kitchen3.jpeg" class = "img-fluid col-sm-4 hover-shadow" onclick="openModal();currentSlide(1)">
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+
+        <div class="mySlides">
+          <div class="numbertext">1 / 3</div>
+          <img src="SpecialtyImages/Kitchen/Kitchen1.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 3</div>
+          <img src="SpecialtyImages/Kitchen/Kitchen2.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 3</div>
+          <img src="SpecialtyImages/Kitchen/Kitchen3.jpeg" style="width:100%">
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Caption text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail image controls -->
+        <div class = "container">
+          <div class="column">
+            <img class="demo" src="SpecialtyImages/Kitchen/Kitchen1.jpeg" onclick="currentSlide(1)" alt="Nature">
+          </div>
+
+          <div class="column">
+            <img class="demo" src="SpecialtyImages/Kitchen/Kitchen2.jpeg" onclick="currentSlide(2)" alt="Snow">
+          </div>
+
+          <div class="column">
+            <img class="demo" src="SpecialtyImages/Kitchen/Kitchen3.jpeg" onclick="currentSlide(3)" alt="Mountains">
+          </div>
+        </div>
+
+      </div>
+    </div>
 
 
     <!-- About -->
@@ -234,28 +305,54 @@
       </div>
     </section>
 
+
       
 
 
     
 
-    <script>
-      $(document).on('click', '[data-toggle="lightbox"]', function(event) 
-      {
-                event.preventDefault();
-                $(this).ekkoLightbox({
-                    onNavigate: function(direction, itemIndex){
-                      console.log('Navigating '+direction+'. Current item: '+itemIndex);
-                    },
+  <script>
+    // Open the Modal
+    function openModal() {
+      document.getElementById('myModal').style.display = "block";
+    }
 
+    // Close the Modal
+    function closeModal() {
+      document.getElementById('myModal').style.display = "none";
+    }
 
-                });
-      });  
-    
-    </script>
-    <script>
-      $(this).ekkoLightbox({ wrapping: false });
-    </script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+  </script>
 
 
 
@@ -268,4 +365,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"></script>
 
   </body>
+
+  <footer>
+    <p>Posted by: Hege Refsnes</p>
+    <p>Contact information: <a href="mailto:someone@example.com">
+    someone@example.com</a>.</p>
+  </footer>
+
+
 </html>

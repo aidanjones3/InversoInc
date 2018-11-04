@@ -40,21 +40,29 @@ div {
 	font-family: ;
 }
 
-
-
-.row .img {
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
 .ContactUsLogo{
 	height: 600px;
 	width: 800px;
-
 }
 
 hr {
 	border-color: inherit;
+}
+
+#firstrow {
+	margin-bottom: 20px;
+}
+
+
+
+#img {
+	border: 5px solid black;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.footer {
+  
 }
 	
 
