@@ -1,5 +1,22 @@
+@font-face{
+	font-family: Hoefler;
+	src: url(HoeflerText.ttf);
+}
+
+div {
+	font-family: Hoefler;
+}
+
+
 .OurWork {
 
+	text-align: justify;
+	text-justify: inter-word;
+	margin-top: 75px;
+	margin-bottom: 75px;
+}
+
+.Specialities {
 	text-align: justify;
 	text-justify: inter-word;
 	margin-top: 75px;
