@@ -35,7 +35,8 @@
   margin: auto;
   padding: 0;
   width: 90%;
-  max-width: 1200px;
+  max-width: 600px;
+  max-height: 200px;
 }
 
 /* The Close Button */

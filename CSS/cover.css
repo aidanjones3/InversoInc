@@ -57,6 +57,7 @@ hr {
 
 #firstrow {
 	margin-bottom: 20px;
+
 }
 
 
@@ -74,6 +75,21 @@ hr {
 	bottom 0;
 	color: white;
   	background-color: Black;
+
+}
+
+.specialtygal {
+	border: 1px solid #ddd; /* Gray border */
+    border-radius: 4px;  /* Rounded border */
+    padding: 5px; /* Some padding */
+    width: 125px; /* Set a small width */
+    height: 200px;
+}
+
+.img-fluid{
+	border: 1px solid #ddd; /* Gray border */
+    border-radius: 4px;  /* Rounded border */
+    padding: 5px; /* Some padding */
 
 }
 	
